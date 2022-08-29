@@ -6,9 +6,9 @@
     int FloorNumber { get; }
     Guid RoomId { get; }
     string RoomName { get; }
-    RoomStatus RoomStatus { get; }
+    bool IsRoomAvailable { get; }
     RoomType RoomType { get; }
     ICollection<Guest> Guests { get; }
-    ICollection<KeycardAllowCheckinRoom> KeycardAllowAccessRooms { get; }
+    ICollection<RoomKeycardAccess> RoomKeycardAccesses { get; }
   }
 }
