@@ -13,7 +13,7 @@ namespace HotelApp.Models
     private readonly Guid _roomId;
     private readonly string _roomName;
     private readonly RoomType _roomType;
-    protected bool _isRoomAvailable;
+    protected bool _isRoomAvailable = true;
 
     public Room(Guid hotelId, int floorNumber, string roomName, RoomType roomType)
     {
@@ -22,7 +22,6 @@ namespace HotelApp.Models
       _floorNumber = floorNumber;
       _roomName = roomName;
       _roomType = roomType;
-      _isRoomAvailable = true;
     }
 
     public Guid HotelId => _hotelId;
