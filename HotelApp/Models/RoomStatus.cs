@@ -4,7 +4,7 @@
   {
     Bookable,
     HasGuestBooking,
-    Booked,
+    HasGuestBooked,
     HasGuestCheckin
   }
 }
