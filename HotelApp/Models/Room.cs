@@ -13,7 +13,7 @@ namespace HotelApp.Models
     private readonly Guid _roomId;
     private readonly string _roomName;
     private readonly RoomType _roomType;
-    protected RoomStatus _roomStatus;
+    protected bool _isRoomAvailable;
 
     public Room(Guid hotelId, int floorNumber, string roomName, RoomType roomType)
     {
@@ -22,6 +22,7 @@ namespace HotelApp.Models
       _floorNumber = floorNumber;
       _roomName = roomName;
       _roomType = roomType;
+      _isRoomAvailable = true;
     }
 
     public Guid HotelId => _hotelId;
@@ -32,12 +33,12 @@ namespace HotelApp.Models
 
     public string RoomName => _roomName;
 
-    public RoomStatus RoomStatus => _roomStatus;
+    public bool IsRoomAvailable => _isRoomAvailable;
 
     public RoomType RoomType => _roomType;
 
     public virtual ICollection<Guest> Guests => new HashSet<Guest>();
 
-    public virtual ICollection<KeycardAllowCheckinRoom> KeycardAllowAccessRooms => new HashSet<KeycardAllowCheckinRoom>();
+    public virtual ICollection<RoomKeycardAccess> RoomKeycardAccesses => new HashSet<RoomKeycardAccess>();
   }
 }
