@@ -4,9 +4,14 @@
   {
     public Guid KeycardId { get; }
 
-    public Keycard()
+    public Keycard(Guid keycardId)
     {
-      KeycardId = Guid.NewGuid();
+      KeycardId = keycardId;
+    }
+
+    public Keycard() : this(Guid.NewGuid())
+    {
+
     }
   }
 }
