@@ -1,10 +1,10 @@
 ﻿namespace HotelApp.Models
 {
-  internal class KeycardAllowCheckinRoom : Keycard
+  internal class RoomKeycardAccess : Keycard
   {
     public Guid RoomId { get; }
 
-    public KeycardAllowCheckinRoom(Guid roomId) : base()
+    public RoomKeycardAccess(Guid roomId) : base()
     {
       RoomId = roomId;
     }
